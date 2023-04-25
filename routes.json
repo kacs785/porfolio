@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Home",
+    "route": "/"
+  },
+  {
+    "label": "Work",
+    "route": "/Works"
+  },
+  {
+    "label": "Post",
+    "route": "/Post"
+  }
+]
