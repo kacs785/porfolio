@@ -1,13 +1,12 @@
 'use client'
 
 import { Box, Heading, Text } from "@chakra-ui/react";
-import { mode } from '@chakra-ui/theme-tools'
-import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 
 export default function Header() {
   return (
-    <Box pl={20} m='auto' mt={20} w='70%'>
-      <Heading as='h2'  >
+    <Box pl='2%' m='auto' mt={20} w='70%'>
+      <Heading as='h2' p='2%' >
         Kacs
       </Heading>
       <Text textAlign='center'>

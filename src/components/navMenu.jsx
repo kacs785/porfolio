@@ -11,9 +11,9 @@ export function NavMenu({ paths }) {
       top={0}
       as='nav'
       w='100%'
-      bg={useColorModeValue('#50505090', '#404060')}
-      style={{ WebkitBackdropFilter: 'blur(10px)' }}
-      zindex={999}
+      bg={useColorModeValue('#50505040', '#40406099')}
+      style={{ backdropFilter: 'blur(5px)' }}
+      zIndex={1}
     >
       <Container
         display='flex'
@@ -23,6 +23,7 @@ export function NavMenu({ paths }) {
         align='center'
         justify='space-between'
       >
+
         <Stack
           direction={{ base: 'column', md: 'row' }}
           display={{ base: 'none', md: 'flex' }}
@@ -41,7 +42,13 @@ export function NavMenu({ paths }) {
           }
 
         </Stack>
-        <Box align='right' m={0} pr={1} width='container.md' display={{ base: 'block', md: 'none' }}>
+        <Box
+          align='right'
+          m={0}
+          pr={1}
+          width='container.md'
+          display={{ base: 'block', md: 'none' }}
+        >
           <ToggleNav paths={paths} />
         </Box>
         <ToggleTheme />
