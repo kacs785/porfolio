@@ -1,12 +1,12 @@
 'use client'
 
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
-import { CacheProvider } from "@chakra-ui/next-js";
 import { Font } from '../../lib/font'
 import { theme } from '../../lib/Theme'
 import Header from '../components/Header';
 import { NavMenu } from '../components/navMenu'
 import { AnimationSection } from '../components/animationSection';
+import Model3D from '../components/model3D';
 const paths = [
   {
     "label": "Home",
@@ -15,21 +15,21 @@ const paths = [
 ]
 export default function RootLayout({ children }) {
   return (
-    <body>
+    <html>
       <head />
-      <div>
-        <CacheProvider>
-          <ChakraProvider theme={theme}>
-            <NavMenu paths={paths} />
-            <Font />
-            <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-            <AnimationSection delay={0.1}>
-              <Header />
-            </AnimationSection>
-            {children}
-          </ChakraProvider>
-        </CacheProvider>
-      </div>
-    </body>
+      <body>
+        <ChakraProvider theme={theme}>
+
+          <NavMenu paths={paths} />
+          <AnimationSection delay={0.1}>
+            <Header />
+          </AnimationSection>
+          <Font />
+          <ColorModeScript />
+          {children}
+
+        </ChakraProvider>
+      </body>
+    </html>
   )
 }
